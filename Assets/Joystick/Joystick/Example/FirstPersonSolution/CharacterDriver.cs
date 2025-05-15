@@ -6,21 +6,21 @@ public class CharacterDriver : MonoBehaviour
 {
     #region Character Move /角色移动
     CharacterController controller;
-    public  float speed = 3;
+    public float speed = 3;
     #endregion
 
     #region View Rotate/视角旋转
     [Header("Character Left Right Rotate Setting:")]
     public float rotateSensitivity = 30;    //方向灵敏度  
-  //  public Slider rotateSensitivitySlider;
+                                            //  public Slider rotateSensitivitySlider;
 
     [Header("Camera Up Down Rotate Setting:")]
     public Camera m_Camera;
-   public float viewSensitivity = 3;    //上下最大视角条件灵敏度  
+    public float viewSensitivity = 3;    //上下最大视角条件灵敏度  
     public float upLimite = -20;  // 上仰角度限制
     public float dnLimite = 30;   //  俯视角度限制
     //public Slider viewSensitivitySlider;
-    public  bool movechar = true;
+    public bool movechar = true;
     private static CharacterDriver instance;
 
     public static CharacterDriver Instance
@@ -43,7 +43,7 @@ public class CharacterDriver : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-  public static bool state = false; //idle isfalse
+    public static bool state = false; //idle isfalse
     /// <summary>
     /// Drive the character to move 
     /// 驱动角色移动
@@ -55,8 +55,8 @@ public class CharacterDriver : MonoBehaviour
         {
             Debug.Log(state);
             Vector3 direction = transform.TransformDirection(new Vector3(v.x, 0, v.y));
-            if(movechar==true)
-            controller.SimpleMove(direction * speed);
+            if (movechar == true)
+                controller.SimpleMove(direction * speed);
             if (state == false)
             {
                 state = true;
@@ -73,20 +73,35 @@ public class CharacterDriver : MonoBehaviour
 
     public void Rotate(Vector2 v)
     {
-        if (v.x != 0)
+        float horizontalInput = v.x;
+        float verticalInput = v.y;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    // Invert both inputs only on WebGL builds
+    horizontalInput = -horizontalInput;
+    verticalInput = -verticalInput;
+#endif
+
+        // Character Left-Right Rotation
+        if (horizontalInput != 0)
         {
-            transform.Rotate(-Vector3.up * v.x * rotateSensitivity * Time.deltaTime, Space.Self);
+            transform.Rotate(Vector3.up * horizontalInput * rotateSensitivity * Time.deltaTime, Space.Self);
         }
-        if (v.y != 0)
+
+        // Camera Up-Down Rotation
+        if (verticalInput != 0)
         {
-            var current = m_Camera.transform.localEulerAngles.x;
+            float current = m_Camera.transform.localEulerAngles.x;
             if (current >= 180) current -= 360;
-            if ((current > -45 || v.y < 0) && (current < 60 || v.y > 0))
+
+            // Clamp rotation between upLimite and dnLimite
+            if ((current > upLimite || verticalInput < 0) && (current < dnLimite || verticalInput > 0))
             {
-                m_Camera.transform.Rotate(-Vector3.right * -v.y * viewSensitivity * Time.deltaTime, Space.Self);
+                m_Camera.transform.Rotate(Vector3.right * -verticalInput * viewSensitivity * Time.deltaTime, Space.Self);
             }
         }
     }
+
     public void onmouseremoved()
     {
 
