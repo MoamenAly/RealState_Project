@@ -53,7 +53,7 @@ public class CharacterDriver : MonoBehaviour
     {
         if (v.x != 0 || v.y != 0)
         {
-            Debug.Log(state);
+            //Debug.Log(state);
             Vector3 direction = transform.TransformDirection(new Vector3(v.x, 0, v.y));
             if (movechar == true)
                 controller.SimpleMove(direction * speed);

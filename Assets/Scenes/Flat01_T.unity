@@ -10734,9 +10734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.6
-  rotateSensitivity: 5
+  rotateSensitivity: 3
   m_Camera: {fileID: 1018405504}
-  viewSensitivity: 5
+  viewSensitivity: 3
   upLimite: -45
   dnLimite: 45
   movechar: 1
@@ -22133,8 +22133,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149489280636}
   m_Mesh: {fileID: -1501218972033267726, guid: d78d272396f174c46a6bc960b56017f8, type: 3}
---- !u!65 &3469287837257200484
-BoxCollider:
+--- !u!64 &3469287837257200484
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22151,9 +22151,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0300007, y: 0.50403, z: 0.99757355}
-  m_Center: {x: -0.0000009834758, y: 0.000015572006, z: 0.49878672}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1501218972033267726, guid: d78d272396f174c46a6bc960b56017f8, type: 3}
 --- !u!33 &3469287837859130404
 MeshFilter:
   m_ObjectHideFlags: 0
