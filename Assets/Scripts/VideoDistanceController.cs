@@ -1,4 +1,3 @@
-using Nfynt;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -6,14 +5,14 @@ public class VideoDistanceController : MonoBehaviour
 {
     public Transform playerTransform;       
     public MeshRenderer video;  
-    private NVideoPlayer videoPlayer;
+    private VideoPlayer videoPlayer;
     public float playDistance = 5f;         
 
     private bool isPlaying = false;
 
     private void Start()
     {
-        videoPlayer = video.GetComponent<NVideoPlayer>();
+        videoPlayer = video.GetComponent<VideoPlayer>();
     }
     void Update()
     {
