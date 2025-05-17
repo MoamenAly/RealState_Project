@@ -22,11 +22,11 @@ public class Trigger_Volume : MonoBehaviour
         if (other.attachedRigidbody)
         {
             //other.attachedRigidbody.AddForce(Vector3.up * 10);
-            Ceiling_Props_Livingroom.SetActive(true);
-            Ceiling_Props_Bedroom.SetActive(true);
-            Ceiling_Props_Guestroom.SetActive(true);
-            Ceiling_Props_Bathroom_Main.SetActive(true);
-            Ceiling_Props_Bathroom_Bedroom.SetActive(true);
+            Ceiling_Props_Livingroom.active = true;
+            Ceiling_Props_Bedroom.active = true;
+            Ceiling_Props_Guestroom.active = true;
+            Ceiling_Props_Bathroom_Main.active = true;
+            Ceiling_Props_Bathroom_Bedroom.active = true;
 
             Debug.Log("I am inside");
 
@@ -38,11 +38,11 @@ public class Trigger_Volume : MonoBehaviour
         {
             if (other.attachedRigidbody)
             {
-            Ceiling_Props_Livingroom.SetActive(false);
-            Ceiling_Props_Bedroom.SetActive(false);
-            Ceiling_Props_Guestroom.SetActive(false);
-            Ceiling_Props_Bathroom_Main.SetActive(false);
-            Ceiling_Props_Bathroom_Bedroom.SetActive(false);
+            Ceiling_Props_Livingroom.active = false;
+            Ceiling_Props_Bedroom.active = false;
+            Ceiling_Props_Guestroom.active = false;
+            Ceiling_Props_Bathroom_Main.active = false;
+            Ceiling_Props_Bathroom_Bedroom.active = false;
 
             Debug.Log("I am otside");
 
@@ -52,19 +52,19 @@ public class Trigger_Volume : MonoBehaviour
 
     public void Show_Ceiling_Props()
     {
-        Ceiling_Props_Livingroom.SetActive(true);
-        Ceiling_Props_Bedroom.SetActive(true);
-        Ceiling_Props_Guestroom.SetActive(true);
-        Ceiling_Props_Bathroom_Main.SetActive(true);
-        Ceiling_Props_Bathroom_Bedroom.SetActive(true);
+        Ceiling_Props_Livingroom.active = true;
+        Ceiling_Props_Bedroom.active = true;
+        Ceiling_Props_Guestroom.active = true;
+        Ceiling_Props_Bathroom_Main.active = true;
+        Ceiling_Props_Bathroom_Bedroom.active = true;
     }
 
     public void Hide_Ceiling_Props()
     {
-        Ceiling_Props_Livingroom.SetActive(false);
-        Ceiling_Props_Bedroom.SetActive(false);
-        Ceiling_Props_Guestroom.SetActive(false);
-        Ceiling_Props_Bathroom_Main.SetActive(false);
-        Ceiling_Props_Bathroom_Bedroom.SetActive(false);
+        Ceiling_Props_Livingroom.active = false;
+        Ceiling_Props_Bedroom.active = false;
+        Ceiling_Props_Guestroom.active = false;
+        Ceiling_Props_Bathroom_Main.active = false;
+        Ceiling_Props_Bathroom_Bedroom.active = false;
     }
 }

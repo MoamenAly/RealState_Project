@@ -7,8 +7,58 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bath_Floor_01
+    second: {fileID: 2100000, guid: d615935b146e46c48a4ca16fae3fe366, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bath_Floor_02
+    second: {fileID: 2100000, guid: a44d510d8911e8f4084ca54beb49f5f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bath_Floor_03
+    second: {fileID: 2100000, guid: b285919b41987b145b94f2b4aaeadf27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bath_Wall_01
+    second: {fileID: 2100000, guid: f8e0ca0f8d22252489e1722e65fcd60d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bath_Wall_02
+    second: {fileID: 2100000, guid: acf5c6ca0667d724b85c3e2b64a6b7cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bath_Wall_03
+    second: {fileID: 2100000, guid: 22daf55d96de99a439b4e276a2339b20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: D2
     second: {fileID: 2100000, guid: 3b6438f15b3366f4aa1d5dcf9a100bfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass_Coated_Black #0
+    second: {fileID: 2100000, guid: c107a6a7ca64de34591fbe54b104440c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #165
+    second: {fileID: 2100000, guid: f7512cbf9ae79f74385d32910918f0a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #2
+    second: {fileID: 2100000, guid: 8732829ff231fb54fa3009d50bf175b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #225
+    second: {fileID: 2100000, guid: 2115edf58f79432408e25767549d1135, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -19,6 +69,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material #45
     second: {fileID: 2100000, guid: 51b8fdd9037581a4696d8c43cd5d6501, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #47
+    second: {fileID: 2100000, guid: 1b9891a09034cab42bbc66a50483a7ca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
