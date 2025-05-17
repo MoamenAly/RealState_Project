@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class URLController : MonoBehaviour
 {
-    public const string TALEEL1_URL = "";
-    public const string TALEEL2_URL = "";
-    public const string ZAHYA1_URL = "";
-    public const string ZAHYA2_URL = "";
+    public const string INSTA_URL = "https://www.instagram.com/asaweroman/";
+    public const string EMAIL_URL = "Info@asawer.om";
+    public const string MOBILE_URL = "tel:80009008";
 
-    public void OpenTaleel1_URL()
-    { 
-        Application.OpenURL(TALEEL1_URL );
-    }
-
-    public void OpenTaleel2_URL()
+    public void OpenInsta_URL()
     {
-        Application.OpenURL(TALEEL2_URL);
+        Application.OpenURL(INSTA_URL);
     }
 
-    public void OpenZahyA1_URL()
+    public void SensEmail_URL()
     {
-        Application.OpenURL(ZAHYA1_URL);
+        string email = EMAIL_URL;
+        string subject = MyEscapeURL("Asawer realstate");
+        string body = MyEscapeURL("I am interested in your services and would like to get in touch with you.");
+
+        Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
     }
 
-    public void OpenZahyA2_URL()
+    string MyEscapeURL(string url)
     {
-        Application.OpenURL(ZAHYA2_URL);
+        return WWW.EscapeURL(url).Replace("+", "%20");
     }
+
+    public void CallPhoneNumber()
+    {
+        Application.OpenURL(MOBILE_URL);
+    }
+
 }
