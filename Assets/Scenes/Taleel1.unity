@@ -18978,7 +18978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148876281}
   m_Layer: 0
-  m_Name: JoystickController_II
+  m_Name: JoystickController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25755,7 +25755,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1576997043}
   m_HandleRect: {fileID: 1576997041}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
